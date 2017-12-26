@@ -100,12 +100,12 @@ static BOOL changeText = NO;
 //}
 
 - (void)ha_bannerView:(ha_BannerView *)bannerView pageIndexDidChanged:(NSUInteger)index {
-    NSLog(@"IndexChanged -> %ld",index);
+    NSLog(@"IndexChanged -> %ld",(long)index);
     self.pageCtrl.currentPage = index;
 }
 
 - (void)ha_bannerViewPageDidSelected:(ha_BannerView *)bannerView atIndex:(NSUInteger)index {
-    NSLog(@"PageSelected -> %ld",index);
+    NSLog(@"PageSelected -> %ld",(long)index);
 }
 
 
