@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SAz-B2-OVg"/>
+                        <viewControllerLayoutGuide type="bottom" id="onc-JX-Ilx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-Za-XNO" customClass="ha_BannerView">
+                                <rect key="frame" x="30" y="50" width="315" height="433"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rzY-Y8-nYC">
+                                        <rect key="frame" x="104" y="341" width="107" height="37"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="107" id="IC8-dN-YaV"/>
+                                        </constraints>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rzY-Y8-nYC" secondAttribute="bottom" constant="55" id="I7D-DO-SYm"/>
+                                    <constraint firstAttribute="width" secondItem="KOq-Za-XNO" secondAttribute="height" multiplier="8:11" id="VIs-HE-NYd"/>
+                                    <constraint firstItem="rzY-Y8-nYC" firstAttribute="centerX" secondItem="KOq-Za-XNO" secondAttribute="centerX" id="tni-62-bsa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaN-iU-s2H">
+                                <rect key="frame" x="149.5" y="512" width="75" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="4Xe-gr-qig"/>
+                                </constraints>
+                                <state key="normal" title="reloadData"/>
+                                <connections>
+                                    <action selector="reloadDataSouce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70u-wF-cW9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81281934190000005" green="0.8627669778" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KOq-Za-XNO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="AQK-y6-Psk"/>
+                            <constraint firstItem="MaN-iU-s2H" firstAttribute="centerX" secondItem="KOq-Za-XNO" secondAttribute="centerX" id="Eql-y8-ls3"/>
+                            <constraint firstItem="KOq-Za-XNO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="T6d-Yq-BeW"/>
+                            <constraint firstItem="MaN-iU-s2H" firstAttribute="top" secondItem="KOq-Za-XNO" secondAttribute="bottom" constant="29" id="q00-td-cKB"/>
+                            <constraint firstAttribute="trailing" secondItem="KOq-Za-XNO" secondAttribute="trailing" constant="30" id="yeD-Iu-jEt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerV" destination="KOq-Za-XNO" id="aOq-50-2V5"/>
+                        <outlet property="pageCtrl" destination="rzY-Y8-nYC" id="ey0-tX-eTv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="28.335832083958024"/>
+        </scene>
+    </scenes>
+</document>
